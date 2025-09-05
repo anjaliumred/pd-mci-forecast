@@ -1,0 +1,40 @@
+# === Paths (Windows) ===
+bids_root: "C:/Users/mridu/Desktop/anjali_project/pd"
+deriv:     "C:/Users/mridu/Desktop/anjali_project/derivatives"   # <- your sub-* live directly here
+labels_csv: "outputs/labels.csv"
+
+# (WSL alternative, if you run from Ubuntu)
+# bids_root: "/mnt/c/Users/mridu/Desktop/anjali_project/pd"
+# deriv:     "/mnt/c/Users/mridu/Desktop/anjali_project/derivatives"
+
+# === What to extract ===
+atlas_name: "schaefer"        # or "aal" (n_parcels ignored for AAL)
+n_parcels: 200
+fc_kind: "correlation"            # or "correlation"
+global_signal_regression: true
+space: "MNI152NLin2009cAsym"
+task: "rest"
+desc: "preproc"
+
+# Minimum usable timepoints **after** scrubbing & filtering
+min_timepoints: 80
+
+# Confounds / denoising
+use_confounds: true
+global_signal_regression: false
+
+# Optional band-pass + detrend inside the masker
+filter:
+  high_pass: 0.01
+  low_pass: 0.1
+  t_r: null            # auto-read from the preproc JSON if null
+
+# Framewise-displacement scrubbing (keeps subjects, censors volumes)
+scrub:
+  enabled: true
+  fd_thresh: 0.5       # censor frames with FD > 0.5 mm
+  n_before: 1          # also censor 1 frame before
+  n_after: 1           # and 1 after
+
+# (rarely needed) force TR for all subjects; leave null to auto-read
+tr_s: null
