@@ -7,7 +7,7 @@ Progression-oriented neuroAI pilot: classify **Parkinson’s disease with normal
 ## TL;DR (current primary result)
 - **Features:** rs‑fMRI **correlation** connectomes (Schaefer atlas), **GSR on**, fMRIPrep confounds + **scrubbing**
 - **Model:** Elastic‑net logistic regression, **nested CV**, probability **calibration**
-- **Performance (OOF, primary config “Step‑1”)**  
+- **Performance (OOF, primary config)**  
   AUROC ≈ **0.75** (95% CI ~ **0.55–0.91**), AUPRC ≈ **0.68**, Balanced Accuracy ≈ **0.71**, ECE ≈ **0.12**  
   Threshold (optimized on OOF for BA): **t\* = 0.612** → Sens 0.64, Spec 0.81, BA 0.73, Acc 0.73, F1 0.69
 - **Cohort:** N≈30 PD subjects (PD‑NC / PD‑MCI) after QC
@@ -225,7 +225,7 @@ Writes:
 - `outputs/threshold_report.json` with Sens/Spec/BA/Acc/Precision/F1 at t\* and BA 95% CI  
 - `outputs/threshold_sweep_ba.png`
 
-> **Our primary model (Step‑1):** t\* = **0.612**, Sens 0.64, Spec 0.81, BA 0.73, Acc 0.73.
+> **Our primary model :** t\* = **0.612**, Sens 0.64, Spec 0.81, BA 0.73, Acc 0.73.
 
 ---
 
