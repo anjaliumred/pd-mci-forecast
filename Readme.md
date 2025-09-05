@@ -67,7 +67,7 @@ numpy pandas scipy scikit-learn matplotlib nibabel nilearn pyyaml joblib
 
 ## 2) Data
 - Source: OpenNeuro dataset **ds005892** (PD‑NC, PD‑MCI, HC).  
-- BIDS root example (Windows): `C:/Users/<you>/Desktop/anjali_project/pd`
+- BIDS root example (Windows): `C:/Users/<your path>`
 
 > We analyze **PD only** for the primary task (PD‑NC vs PD‑MCI). HC can be used for normative checks, but is **not** part of the primary labels.
 
@@ -87,10 +87,10 @@ Copy-Item C:\path\to\license.txt C:\...\license.txt
 **WSL bash command (example)**
 ```bash
 # Edit paths for your system
-BIDS=/mnt/c/Users/<you>/Desktop/anjali_project/pd
-DERIV=/mnt/c/Users/<you>/Desktop/anjali_project/derivatives
-WORK=/mnt/c/Users/<you>/Desktop/anjali_project/workdir
-FS=/mnt/c/Users/<you>/Desktop/anjali_project/license.txt
+BIDS=/mnt/c/Users/<your_path>
+DERIV=/mnt/c/Users/<your_path>
+WORK=/mnt/c/Users/<your_path>
+FS=/mnt/c/Users/<your_path>
 
 sudo docker run --rm -it \
   -v $BIDS:/data:ro \
